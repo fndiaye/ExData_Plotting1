@@ -12,11 +12,11 @@ par(mar = c(1,1,1,1))
 png("plot2.png")
 
 ##Create plot
-#xrange = range(strptime(engyCons$Date, "%a"))
+
 xrange = range(as.numeric(engyCons$Time))
 yrange = range(as.numeric(engyCons$Global_active_power))
 
-plot(xrange, yrange, type = "n", ylab = "Global Active Power (kilowatts)", xlab = "")
+plot(xrange, yrange, type = "l", ylab = "Global Active Power (kilowatts)", xlab = "")
 lines(engyCons$Time, as.numeric(engyCons$Global_active_power), type = "l")
 
 
